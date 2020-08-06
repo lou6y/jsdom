@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="icon" href="res/shopping-cart.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="shopping-cart">
+
+            <div class="header">
+                <h1 id="shopping-cart">Shopping Cart</h1>
+                <h1 id="number-it">3</h1>
+                <h1 id='number-items'>Items</h1>
+            </div>
+
+            <hr>
+
+            <div class="headings">
+                <h4>PRODUCT DETAILS</h4>
+                <h4 id="quant">QUANTITY</h4>
+                <h4>PRICE</h4>
+                <h4>TOTAL</h4>
+            </div>
+
+            <div class="items-list">
+                <div class="item1" id="item1">
+                    <div class="heart-delete1">
+                        <div class="heart" id="heart1" onclick="redHeart()">
+                            ♡
+                        </div>
+                    </div>
+                    <div class="picture">
+                        <img src="res/fifa20.png" width="100px" height="100px" alt="">
+                    </div>
+
+                    <div class="description">
+                        <div class="name">
+                            Fifa 19
+                        </div>
+
+                        <div class="field">
+                            PS4
+                        </div>
+
+                        <div class="remove" onclick="remove1()">
+                            Remove
+                        </div>
+
+                    </div>
+                    <div class="quantity">
+                        <div id="minus" onclick="sub()">-</div>
+                        <div id="number1">1</div>
+                        <div id="plus" onclick="add()">+</div>
+                    </div>
+
+                    <div id="price1">120</div>
+                    <div id="dt1">dt</div>
+
+                    <div id="total1">120dt</div>
+                </div>
+
+
+
+
+
+                <div class="item2" id="item2">
+                    <div class="heart-delete2">
+                        <div class="heart" id="heart2" onclick="redHeart2()">
+                            ♡
+                        </div>
+
+                    </div>
+                    <div class="picture">
+                        <img src="res/ps4.jpg" width="100px" height="100px" alt="">
+                    </div>
+
+                    <div class="description">
+                        <div class="name">
+                            Glacier White 500GB
+                        </div>
+
+                        <div class="field">
+                            PS4
+                        </div>
+
+                        <div class="remove" onclick="remove2()">
+                            Remove
+                        </div>
+                    </div>
+                    <div class="quantity">
+                        <div id="minus" onclick="sub2()">-</div>
+                        <div id="number2">1</div>
+                        <div id="plus" onclick="add2()">+</div>
+                    </div>
+
+                    <div id="price2">1299</div>
+                    <div id="dt2">dt</div>
+
+                    <div id="total2">1299dt</div>
+
+                </div>
+
+
+
+
+
+                <div class="item3" id="item3">
+                    <div class="heart-delete3">
+                        <div class="heart" id="heart3" onclick="redHeart3()">
+                            ♡
+                        </div>
+
+                    </div>
+                    <div class="picture">
+                        <img src="res/headset.jpg" width="100px" height="100px" alt="">
+                    </div>
+
+                    <div class="description">
+                        <div class="name">
+                            Platinum Headset
+                        </div>
+
+                        <div class="field">
+                            PS3
+                        </div>
+
+                        <div class="remove" onclick="remove3()">
+                            Remove
+                        </div>
+                    </div>
+
+                    <div class="quantity">
+                        <div id="minus" onclick="sub3()">-</div>
+                        <div id="number3">1</div>
+                        <div id="plus" onclick="add3()">+</div>
+                    </div>
+                    <div id="price3">159</div>
+                    <div id="dt3">dt</div>
+                    <div id="total3">159dt</div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="order-summary">
+            <h1>Order Summary</h1>
+            <hr>
+            <div class="item-price">
+                <div class="item">Items <span id="number-final">3</span></div>
+                <div id="price5">1578dt</div>
+            </div>
+            <div class="label-input">
+                <label for="shipping">SHIPPING</label>
+                <select name="shipping" id="shipping" onchange="finalPrice()">
+                    <option value="5">Standard Delivery - 5dt</option>
+                    <option value="10">Express - 10dt</option>
+                </select>
+                <label for="promo">PROMO CODE</label>
+                <input type="text">
+            </div>
+            <button id="button">APPLY</button>
+            <br> <br>
+            <hr>
+
+            <div class="lastone">
+                <h1>TOTAL COST</h1>
+                <h1 id="final-price"></h1>
+            </div>
+
+            <button class="checkout">CHECKOUT</button>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>
